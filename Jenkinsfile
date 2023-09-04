@@ -25,9 +25,9 @@ node{
         }
     }
     
-    // stage('Maven Build'){
-    //     sh "${mavenCMD} clean package"        
-    // }
+    stage('Maven Build'){
+        sh "${mavenCMD} install -DskipTests"        
+    }
     
     // stage('Publish Test Reports'){
     //     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/surefire-reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
