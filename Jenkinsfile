@@ -33,10 +33,10 @@ node{
         publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/surefire-reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
     }
     
-    // stage('Docker Image Build'){
-    //     echo 'Creating Docker image'
-    //     sh "docker build -t $dockerHubUser/$containerName:$tag --pull --no-cache ."
-    // }
+    stage('Docker Image Build'){
+        echo 'Creating Docker image'
+        sh "docker build -t $dockerHubUser/$containerName:$tag --pull --no-cache ."
+    }
 	
     // stage('Docker Image Scan'){
     //     echo 'Scanning Docker image for vulnerbilities'
