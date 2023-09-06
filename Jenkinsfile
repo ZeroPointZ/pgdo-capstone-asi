@@ -26,7 +26,7 @@ node{
     }
     
     stage('Maven Build'){
-        sh "${mavenCMD} install -DskipTests"        
+        sh "${mavenCMD} clean package"        
     }
     
     // stage('Publish Test Reports'){
